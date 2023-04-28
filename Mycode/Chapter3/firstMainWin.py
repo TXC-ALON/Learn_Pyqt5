@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import sys
 
 # Form implementation generated from reading ui file 'firstMainWin.ui'
 #
@@ -9,6 +10,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import QMainWindow, QApplication
 
 
 class Ui_MainWindow(object):
@@ -36,3 +38,17 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.pushButton.setText(_translate("MainWindow", "按钮"))
+
+
+class MyMainWindow(QMainWindow, Ui_MainWindow):
+
+    def __init__(self, parent=None):
+        super(MyMainWindow, self).__init__(parent)
+        self.setupUi(self)
+
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    myWin = MyMainWindow()
+    myWin.show()
+    sys.exit(app.exec_())
