@@ -19,7 +19,7 @@ class Icon(QWidget):
      
     #2   
     def initUI(self):
-        self.setGeometry(300,  300,  250,  150)  
+        self.setGeometry(300,  300,  1250,  150)
         self.setWindowTitle('演示程序图标例子')  
         self.setWindowIcon(QIcon('./images/cartoon1.ico'))  
               

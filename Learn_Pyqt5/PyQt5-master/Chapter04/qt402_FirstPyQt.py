@@ -16,3 +16,9 @@ window.move(250, 150)
 window.setWindowTitle('Hello PyQt5')
 window.show()
 sys.exit(app.exec_())    
+
+if __name__ == "__main__":
+	app = QApplication(sys.argv)
+	win = TextEditDemo()
+	win.show()
+	sys.exit(app.exec_())
