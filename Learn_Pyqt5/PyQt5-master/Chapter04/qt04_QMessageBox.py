@@ -23,7 +23,8 @@ class WinForm( QWidget):
 
 	def msg(self):  
         # 使用infomation信息框  
-		reply = QMessageBox.information(self, "标题", "对话框消息正文", QMessageBox.Yes | QMessageBox.No ,  QMessageBox.Yes )  
+		#reply = QMessageBox.information(self, "标题", "对话框消息正文", QMessageBox.Yes | QMessageBox.No ,  QMessageBox.Yes )
+		reply = QMessageBox.question(self, "标题", "提问框消息正文", QMessageBox.Yes | QMessageBox.No, QMessageBox.Yes)
 		print( reply )
 		
 if __name__ == '__main__':

@@ -18,7 +18,7 @@ class lineEditDemo(QWidget):
 		e1.setValidator( QIntValidator() )
 		e1.setMaxLength(4)
 		e1.setAlignment( Qt.AlignRight )
-		e1.setFont( QFont("Arial",20))
+		e1.setFont( QFont("Arial",15))
 		e2 = QLineEdit()
 		e2.setValidator( QDoubleValidator(0.99,99.99,2))
 		flo = QFormLayout()

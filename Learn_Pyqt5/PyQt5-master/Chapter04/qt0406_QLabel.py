@@ -52,7 +52,7 @@ class WindowDemo(QWidget):
         #3
         label1.setOpenExternalLinks(True)
         # 打开允许访问超链接,默认是不允许，需要使用 setOpenExternalLinks(True)允许浏览器访问超链接
-        label4.setOpenExternalLinks( False )
+        label4.setOpenExternalLinks( True )
         # 点击文本框绑定槽事件  
         label4.linkActivated.connect( link_clicked )
         

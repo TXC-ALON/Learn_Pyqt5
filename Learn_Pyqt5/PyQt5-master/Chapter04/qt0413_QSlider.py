@@ -27,7 +27,7 @@ class SliderDemo(QWidget):
         #设置最小值
 		self.sl.setMinimum(10)
 		#设置最大值
-		self.sl.setMaximum(50)
+		self.sl.setMaximum(100)
 		# 步长
 		self.sl.setSingleStep( 3 ) 
 		# 设置当前值

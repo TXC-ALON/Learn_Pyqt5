@@ -23,12 +23,13 @@ class spindemo(QWidget):
 		self.l1.setAlignment(Qt.AlignCenter)
 		layout.addWidget(self.l1)
 		self.sp = QSpinBox()
+		self.sp.setValue(0)
 		layout.addWidget(self.sp)
 		self.sp.valueChanged.connect(self.valuechange)
 		self.setLayout(layout)
-		      
-	def valuechange(self):	
-		self.l1.setText("current value:" + str(self.sp.value()) )
+		self.l1.setText('Current Value: {}'.format(self.sp.value()))
+	def valuechange(self):
+		self.l1.setText('Current Value: {}'.format(self.sp.value()))
 
 if __name__ == '__main__':
 	app = QApplication(sys.argv)

@@ -31,7 +31,8 @@ class filedialogdemo(QWidget):
 
 	def getfile(self):
 		fname, _  = QFileDialog.getOpenFileName(self, 'Open file', 'c:\\',"Image files (*.jpg *.gif)")
-		self.le.setPixmap(QPixmap(fname))
+		pixmap = QPixmap(fname).scaledToHeight(500)
+		self.le.setPixmap(pixmap)
 	
 	def getfiles(self):
 		dlg = QFileDialog()

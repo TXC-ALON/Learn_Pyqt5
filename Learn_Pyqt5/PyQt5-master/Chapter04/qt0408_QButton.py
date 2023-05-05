@@ -17,7 +17,7 @@ class Form(QDialog):
 		super(Form, self).__init__(parent)
 		layout = QVBoxLayout()
 
-		self.btn1 = QPushButton("Button1")
+		self.btn1 = QPushButton("&Button1")
 		self.btn1.setCheckable(True)
 		self.btn1.toggle()
 		self.btn1.clicked.connect(lambda:self.whichbtn(self.btn1) )
