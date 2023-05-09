@@ -45,7 +45,7 @@ class WinForm(QWidget):
 
 	def startTimer(self): 
         # 设置计时间隔并启动
-		self.timer.start(1000)
+		self.timer.start(1 )
 		self.startBtn.setEnabled(False)
 		self.endBtn.setEnabled(True)
 

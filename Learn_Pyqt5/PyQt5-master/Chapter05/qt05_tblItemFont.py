@@ -32,11 +32,11 @@ class Table(QWidget):
         tableWidget.setItem(0, 0, newItem)  
                  
         newItem = QTableWidgetItem("男")  
-        newItem.setFont( QFont( "Times", 12, QFont.Black ) )
+        newItem.setFont( QFont( "微软雅黑", 12, QFont.Black ) )
         tableWidget.setItem(0, 1, newItem)  
           
         newItem = QTableWidgetItem("160") 
-        newItem.setFont( QFont( "Times", 12, QFont.Black ) )
+        newItem.setFont( QFont( "JetBrains Mono", 12, QFont.Black ) )
         tableWidget.setItem(0, 2, newItem)   
         
         self.setLayout(conLayout)

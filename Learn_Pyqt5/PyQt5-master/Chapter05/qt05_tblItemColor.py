@@ -36,7 +36,7 @@ class Table(QWidget):
         tableWidget.setItem(0, 1, newItem)  
           
         newItem = QTableWidgetItem("160") 
-        newItem.setForeground(QBrush(QColor(255, 0, 0))) 
+        newItem.setForeground(QBrush(QColor(255,255, 0)))
         tableWidget.setItem(0, 2, newItem)     
         
         self.setLayout(conLayout)

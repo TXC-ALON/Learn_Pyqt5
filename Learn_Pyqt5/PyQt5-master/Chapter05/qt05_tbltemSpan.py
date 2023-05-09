@@ -34,8 +34,17 @@ class Table(QWidget):
         tableWidget.setItem(0, 1, newItem)  
           
         newItem = QTableWidgetItem("160")  
-        tableWidget.setItem(0, 2, newItem)   
-        
+        tableWidget.setItem(0, 2, newItem)
+
+        newItem = QTableWidgetItem("王五")
+        tableWidget.setItem(3, 0, newItem)
+
+        newItem = QTableWidgetItem("男")
+        tableWidget.setItem(3, 1, newItem)
+
+        newItem = QTableWidgetItem("170")
+        tableWidget.setItem(3, 2, newItem)
+
         self.setLayout(conLayout)
 
 if __name__ == '__main__':

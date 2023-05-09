@@ -28,8 +28,10 @@ class Table(QWidget):
 		self.tableView=QTableView()
 		self.tableView.setModel(self.model)
 		#下面代码让表格100填满窗口
-		#self.tableView.horizontalHeader().setStretchLastSection(True)
-		#self.tableView.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+		self.tableView.horizontalHeader().setStretchLastSection(True)
+		self.tableView.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+		self.tableView.verticalHeader().setStretchLastSection(True)
+		self.tableView.verticalHeader().setSectionResizeMode(QHeaderView.Stretch)
 		dlgLayout=QVBoxLayout();
 		dlgLayout.addWidget(self.tableView)
 		self.setLayout(dlgLayout)
