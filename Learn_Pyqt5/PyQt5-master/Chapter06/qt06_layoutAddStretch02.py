@@ -18,7 +18,7 @@ class Winform(QWidget):
 		# 水平布局按照从左到右的顺序进行添加按钮部件。
 		hlayout = QHBoxLayout()  
         # 添加伸缩		
-		hlayout.addStretch(0)
+		hlayout.addStretch(20)
 				
 		hlayout.addWidget( QPushButton(str(1)) )
 		hlayout.addWidget( QPushButton(str(2)) )
@@ -27,7 +27,7 @@ class Winform(QWidget):
 		hlayout.addWidget( QPushButton(str(5)) )    
         # 添加伸缩		
 		#hlayout.addStretch(1)
-			
+		hlayout.addStretch(10)
 		self.setLayout(hlayout)   
   
 if __name__ == "__main__":  

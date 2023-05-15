@@ -25,7 +25,7 @@ class Winform(QWidget):
 		hlayout.addWidget( QPushButton(str(5)))    
         		
 		#设置控件间的间距
-		hlayout.setSpacing( 0 )	
+		hlayout.setSpacing( 10 )
 		self.setLayout(hlayout)   
   
 if __name__ == "__main__":  
