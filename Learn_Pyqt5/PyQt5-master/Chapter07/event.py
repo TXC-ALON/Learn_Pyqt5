@@ -15,7 +15,7 @@ class Widget(QWidget):
         self.resize(400, 300)
         self.move(100, 100)
         self.setWindowTitle("Events")
-        QTimer.singleShot(0, self.giveHelp)  # 避免窗口大小重绘事件的影响，可以把参数0改变成3000（3秒），然后在运行，就可以明白这行代码的意思。
+        QTimer.singleShot(3000, self.giveHelp)  # 避免窗口大小重绘事件的影响，可以把参数0改变成3000（3秒），然后在运行，就可以明白这行代码的意思。
 
     def giveHelp(self):
         self.text = "请点击这里触发追踪鼠标功能"

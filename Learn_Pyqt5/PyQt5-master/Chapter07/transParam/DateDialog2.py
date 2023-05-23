@@ -41,5 +41,6 @@ class DateDialog(QDialog):
         self.datetime_emit.dateTimeChanged.connect(self.emit_signal)
 
     def emit_signal(self):
+        print("emit_self_signal")
         date_str = self.datetime_emit.dateTime().toString()
         self.Signal_OneParameter.emit(date_str)
