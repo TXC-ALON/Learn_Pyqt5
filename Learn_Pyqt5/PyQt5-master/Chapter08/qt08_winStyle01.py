@@ -14,8 +14,9 @@ class MainWindow(QMainWindow):
 		self.resize(477, 258) 
 		self.setWindowTitle("设置窗口样式例子") 
 		#设置窗口样式为窗口无边框化
-		self.setWindowFlags( Qt.SubWindow )
-		self.setObjectName("MainWindow") 
+		#self.setWindowFlags( Qt.SubWindow )
+		self.setWindowFlags(Qt.Widget)
+		self.setObjectName("MainWindow")
 		self.setStyleSheet("#MainWindow{border-image:url(images/python.jpg);}")
        
 if __name__ == "__main__": 
