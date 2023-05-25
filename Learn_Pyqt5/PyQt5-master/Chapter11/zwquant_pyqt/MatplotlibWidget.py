@@ -2,8 +2,8 @@ import sys
 import random
 import matplotlib
 
-
 import matplotlib as mpl
+
 mpl_agg = 'Qt5Agg'
 try:
     import PyQt5
@@ -20,6 +20,7 @@ from matplotlib.figure import Figure
 import matplotlib.pyplot as plt
 import pandas as pd
 
+
 class MyMplCanvas(FigureCanvas):
     """FigureCanvas的最终的父类其实是QWidget。"""
 
@@ -33,11 +34,10 @@ class MyMplCanvas(FigureCanvas):
         self.fig = Figure(figsize=(width, height), dpi=dpi)  # 新建一个figure
         self.fig.set_tight_layout(True)
 
-
         self.axes = self.fig.add_subplot(111)  # 建立一个子图，如果要建立复合图，可以在这里修改
 
-        self.axes.hold(False)  # 每次绘图的时候不保留上一次绘图的结果
-
+        #self.axes.hold(False)  # 每次绘图的时候不保留上一次绘图的结果
+        self.axes.clear()
         FigureCanvas.__init__(self, self.fig)
         self.setParent(parent)
 
@@ -49,18 +49,18 @@ class MyMplCanvas(FigureCanvas):
 
     '''绘制静态图，可以在这里定义自己的绘图逻辑'''
 
-    def start_static_plot(self,qx=None):
-        if qx != None: # 与zwquant结合，qx是zwquant的一个类实例
+    def start_static_plot(self, qx=None):
+        if qx != None:  # 与zwquant结合，qx是zwquant的一个类实例
             df = qx.qxLib.copy()
-            df.set_index('date',inplace=True)
-            df.rename_axis(lambda x: pd.to_datetime(x),inplace=True)
+            df.set_index('date', inplace=True)
+            df.rename_axis(lambda x: pd.to_datetime(x), inplace=True)
             ax1 = self.axes
             ax1.plot(df['dret'], color='green', label='dret', linewidth=0.5)
             ax1.legend(loc='upper left')
             ax2 = ax1.twinx()
             ax2.plot(df['val'], color='red', label='val', linewidth=2)
             ax2.legend(loc='upper right')
-        else:# 用于测试，不需要zwquant也能运行，方面快速开发自己的GUI界面。
+        else:  # 用于测试，不需要zwquant也能运行，方面快速开发自己的GUI界面。
             t = arange(0.0, 3.0, 0.01)
             s = sin(2 * pi * t)
             self.axes.plot(t, s)
@@ -106,7 +106,7 @@ class MatplotlibWidget(QWidget):
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     ui = MatplotlibWidget()
-    ui.mpl.start_static_plot()  # 测试静态图效果
-    # ui.mpl.start_dynamic_plot() # 测试动态图效果
+    #ui.mpl.start_static_plot()  # 测试静态图效果
+    ui.mpl.start_dynamic_plot() # 测试动态图效果
     ui.show()
     app.exec_()
