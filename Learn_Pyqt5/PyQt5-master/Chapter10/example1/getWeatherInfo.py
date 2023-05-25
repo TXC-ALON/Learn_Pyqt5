@@ -6,7 +6,10 @@
 '''
 
 import requests
-
+"""
+现在中国天气网的api不免费开放了,寄
+https://blog.csdn.net/qq_38161040/article/details/88674203
+"""
 rep = requests.get('http://www.weather.com.cn/data/sk/101010100.html')
 rep.encoding = 'utf-8'
 

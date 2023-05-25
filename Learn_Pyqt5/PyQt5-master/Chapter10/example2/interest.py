@@ -24,7 +24,7 @@ class Form(QDialog):
 		self.principalSpinBox.setPrefix("RMB ")
 		rateLabel = QLabel("Rate:")
 		self.rateSpinBox = QDoubleSpinBox()
-		self.rateSpinBox.setRange(1, 100)
+		self.rateSpinBox.setRange(1, 300)
 		self.rateSpinBox.setValue(5)
 		self.rateSpinBox.setSuffix(" %")
 		yearsLabel = QLabel("Years:")
