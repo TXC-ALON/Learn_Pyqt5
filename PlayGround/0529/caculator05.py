@@ -56,6 +56,8 @@ class Calculator(QWidget):
             button_obj = MyButton(button, col, row)
             grid_layout.addWidget(button_obj, row, col)
             button_obj.clicked.connect(self.handle_button_click)
+            button_obj.setStyleSheet(
+                  "QPushButton {background-color: rgb(255, 255, 0); border-radius: 5px;}")
             fontSize = button_obj.height() // 20
             col += 1
             if col > 3:
@@ -101,7 +103,6 @@ class Calculator(QWidget):
                 text_width = font_metrics.width(self.result_display.text())
             LineFont = QFont("微软雅黑", int(font_size))
             self.result_display.setFont(LineFont)
-
 
 
     def resizeEvent(self, event):
