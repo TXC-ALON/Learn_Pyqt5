@@ -61,6 +61,6 @@ class Taichi(QWidget):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    window = myWindow()
+    window = Taichi()
     window.show()
     sys.exit(app.exec())
